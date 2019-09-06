@@ -16,7 +16,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   ## 网关
   cloud:
-    gates:
+    gateway:
       ## 设置注册中心可见
       discovery:
         locator:
