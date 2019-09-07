@@ -53,6 +53,11 @@ spring:
           uri: lb://BUUKLE-SECURITY
           predicates:
             - Host=tpassport.buukle.top
+         ## 网关路由到 wjs(worker job system) 服务
+        - id: wjs
+          uri: lb://BUUKLE-WJS
+          predicates:
+            - Host=twjs.buukle.top
   #redis
   redis:
     database: 5
