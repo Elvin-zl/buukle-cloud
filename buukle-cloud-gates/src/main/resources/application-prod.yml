@@ -57,6 +57,11 @@ spring:
           uri: lb://BUUKLE-WJS
           predicates:
             - Host=wjs.buukle.top
+        ## 网关路由到 activiti 服务
+        - id: activiti
+          uri: lb://BUUKLE-ACTIVITI
+          predicates:
+            - Host=tactiviti.buukle.top
   #redis
   redis:
     database: 5
