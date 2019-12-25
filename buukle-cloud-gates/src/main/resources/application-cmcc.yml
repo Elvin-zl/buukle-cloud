@@ -26,43 +26,43 @@ spring:
         - id: static
           uri: lb://BUUKLE-WWW
           predicates:
-            - Host=tstatic.buukle.top
+            - Host=tstatic.buukle.top:8080
          ## 网关路由到 www 服务
         - id: www
           uri: lb://BUUKLE-WWW
           predicates:
-            - Host=twww.buukle.top
+            - Host=twww.buukle.top:8080
          ## 网关路由到 timeline 服务 (暂时与www在同一项目开发)
         - id: timeline
           uri: lb://BUUKLE-WWW
           ## uri: lb://BUUKLE-TIMELINE
           predicates:
-            - Host=timeline.buukle.top
+            - Host=timeline.buukle.top:8080
          ## 网关路由到 cms 服务
         - id: cms
           uri: lb://BUUKLE-CMS
           predicates:
-            - Host=tcms.buukle.top
+            - Host=tcms.buukle.top:8080
          ## 网关路由到 security 服务
         - id: security
           uri: lb://BUUKLE-SECURITY
           predicates:
-            - Host=tsecurity.buukle.top
+            - Host=tsecurity.buukle.top:8080
          ## 网关路由到 passport 服务
         - id: passport
           uri: lb://BUUKLE-SECURITY
           predicates:
-            - Host=tpassport.buukle.top
+            - Host=tpassport.buukle.top:8080
          ## 网关路由到 wjs(worker job system) 服务
         - id: wjs
           uri: lb://BUUKLE-WJS
           predicates:
-            - Host=twjs.buukle.top
+            - Host=twjs.buukle.top:8080
          ## 网关路由到 activiti 服务
         - id: activiti
           uri: lb://BUUKLE-ACTIVITI
           predicates:
-            - Host=tactiviti.buukle.top
+            - Host=tactiviti.buukle.top:8080
   #redis
   redis:
     database: 5
