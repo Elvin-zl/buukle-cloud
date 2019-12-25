@@ -1,6 +1,8 @@
 ## server
 server:
-  port: 8080
+  port: 80
+  servlet:
+    context-path: /
 
 ## spring
 spring:
@@ -26,43 +28,43 @@ spring:
         - id: static
           uri: lb://BUUKLE-WWW
           predicates:
-            - Host=tstatic.buukle.top:8080
+            - Host=tstatic.buukle.top
          ## 网关路由到 www 服务
         - id: www
           uri: lb://BUUKLE-WWW
           predicates:
-            - Host=twww.buukle.top:8080
+            - Host=twww.buukle.top
          ## 网关路由到 timeline 服务 (暂时与www在同一项目开发)
         - id: timeline
           uri: lb://BUUKLE-WWW
           ## uri: lb://BUUKLE-TIMELINE
           predicates:
-            - Host=timeline.buukle.top:8080
+            - Host=timeline.buukle.top
          ## 网关路由到 cms 服务
         - id: cms
           uri: lb://BUUKLE-CMS
           predicates:
-            - Host=tcms.buukle.top:8080
+            - Host=tcms.buukle.top
          ## 网关路由到 security 服务
         - id: security
           uri: lb://BUUKLE-SECURITY
           predicates:
-            - Host=tsecurity.buukle.top:8080
+            - Host=tsecurity.buukle.top
          ## 网关路由到 passport 服务
         - id: passport
           uri: lb://BUUKLE-SECURITY
           predicates:
-            - Host=tpassport.buukle.top:8080
+            - Host=tpassport.buukle.top
          ## 网关路由到 wjs(worker job system) 服务
         - id: wjs
           uri: lb://BUUKLE-WJS
           predicates:
-            - Host=twjs.buukle.top:8080
+            - Host=twjs.buukle.top
          ## 网关路由到 activiti 服务
         - id: activiti
           uri: lb://BUUKLE-ACTIVITI
           predicates:
-            - Host=tactiviti.buukle.top:8080
+            - Host=tactiviti.buukle.top
   #redis
   redis:
     database: 5
@@ -78,7 +80,7 @@ spring:
 ## 注册中心
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 192.168.254.27
     prefer-ip-address: true
     serverport: 9090
   client:
