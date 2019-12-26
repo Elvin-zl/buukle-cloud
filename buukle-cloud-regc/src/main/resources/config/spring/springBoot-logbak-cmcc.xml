@@ -65,7 +65,7 @@
         </triggeringPolicy>
     </appender>
 
-    <!-- 每天生成一个html格式的日志结束 -->
+    <!-- 每天生成一个html格式的日志结束  -->
 
     <!--&lt;!&ndash;日志异步到数据库 &ndash;&gt;-->
     <!--<appender name="DB" class="ch.qos.logback.classic.db.DBAppender">-->
