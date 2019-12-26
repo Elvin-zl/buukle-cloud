@@ -41,7 +41,7 @@
                 <pattern>%p%d%msg%M%F{32}%L</pattern>
             </layout>
         </encoder>
-        <file>/opt/logs/buukle/gates/gates-error-log.html</file>
+        <file>/opt/logs/buukle/buukle-cloud/buukle-gates/gates-error-log.html</file>
     </appender>
 
     <!-- 生成html格式日志结束 -->
