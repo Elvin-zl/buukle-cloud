@@ -93,4 +93,4 @@ mybatis:
   type-aliases-package: top.buukle.cloud.gates.entity
 ## 日志
 logging:
-  config: classpath:config/spring/springBoot-logbak-local.xml
+  config: classpath:config/spring/springBoot-logbak-cmcc.xml
